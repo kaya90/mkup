@@ -1,16 +1,18 @@
 <!DOCTYPE html>
-<html>
+<html ng-app='myApp'>
 <head>
 	<title>mkup</title>
 	<script type="text/javascript" src="../assets/angular.min.js"></script>
 	<script type="text/javascript" src="../assets/angular-route.min.js"></script>
 	<link rel="stylesheet" type="text/css" href="../assets/bootstrap.min.css">
+	<script type="text/javascript" src="module.js"></script>
+	<link href='http://fonts.googleapis.com/css?family=Roboto+Slab:400,700' rel='stylesheet' type='text/css'>
 	<style type="text/css">
-	* {
-		outline: red dotted 1px;
-	}
+/*	* {
+		outline: black dotted 1px;
+	}*/
 	body {
-		background-color: #D41321;
+		background-color: #EFACB3;
 	}
 	.header {
 		margin: 0 auto;
@@ -66,123 +68,93 @@
 	}
 	.content {
 		background-color: white;
-		padding: 10px;
+		padding: 10px 20px;
 		width: 100%;
-		vertical-align: 
+	}
+	.slide img {
+		width: 100%;
+		height: 230px;
+		overflow: hidden;
+	}
+	.slide p {
+		background-color: black;
+		width: 100%;
+		color: white;
+		position: relative;
+		bottom: 20px;
+	}
+	#content1 h2 {
+		font-family: 'Roboto Slab', serif;
+		color: white;
+		background-color: black;
+		opacity: .8;
+		padding: 25px;
+		text-align: center;
+	}
+	#content1 p {
+		margin: 0px;
+		color: white;
+		background-color: black;
+		padding: 10px 25px;
+		opacity: .8;
+		text-align: center;
+	}
+	#content1 {
+		background-image: url("./images/content1.jpg");
+		background-position: 50%;
+	}
+	#slider {
+		margin-top: 15px;
+	}
+	#register {
+		text-align: center;
+	}
+	#register button {
+		padding: 10px;
+
+	}
+	.profile_content {
+		background-color: white;
+		padding: 10px 20px;
+	}
+	.howto_content {
+		background-color: white;
+		padding: 10px 20px;
 	}
 	</style>
 </head>
 <body>
-		<div class="header">
-			<div class="container">
-				
-				<div class="row">
-					<div class="col-xs-2">
-						<h2>MAKE UP</h2>
-					</div>
-					<div class="col-xs-10">
-						<!-- <ul>
-							<li><a>login</a></li>
-							<li><a>register</a></li>
-							<li><a>cart</a></li>
-							<li>
-								<form>
-									<input type="text" placeholder="search">
-								</form>
-							</li>
-						</ul> -->
-						<div class="profile">
-							<img width="50px" height="50px" class="img-circle" src="./images/user_blank_profile.gif">
-						</div> 
-					</div>
-					
+	<div class="header">
+		<div class="container">
+			
+			<div class="row">
+				<div class="col-xs-6 col-md-2">
+					<a href="#/"> <h3>MAKE UP</h3></a>
 				</div>
-			</div>
+				<div class="col-xs-6 col-md-10">
+					<!-- <ul>
+						<li><a>login</a></li>
+						<li><a>register</a></li>
+						<li><a>cart</a></li>
+						<li>
+							<form>
+								<input type="text" placeholder="search">
+							</form>
+						</li>
+					</ul> -->
+					<div class="profile">
+						<a href="#/profile">
+						<img width="50px" height="50px" class="img-circle" src="./images/user_blank_profile.gif"></a>
 
-		</div>
-	<div class="container">
-		<div class="wrapper">
-			<div class="row">
-				<div class="col-sm-4">
-					<div class="content">
-						here
-					</div>
+					</div> 
 				</div>
-				<div class="col-sm-2">
-					<div class="content">
-					</div>
-				</div>
-				<div class="col-sm-6">
-					<div class="content">
-						<h4>Register</h4>
-						<form class="form-horizontal">
-						  <!-- <div class="form-group">
-						    <label for="inputEmail3" class="col-sm-3 control-label">First Name</label>
-						    <div class="col-sm-9">
-						      <input type="email" class="form-control" id="inputEmail3" placeholder="First Name">
-						    </div>
-						  </div>
-						  <div class="form-group">
-						    <label for="inputEmail3" class="col-sm-3 control-label">Last Name</label>
-						    <div class="col-sm-9">
-						      <input type="email" class="form-control" id="inputEmail3" placeholder="Email">
-						    </div>
-						  </div> -->
-						  <div class="form-group">
-						    <label for="inputEmail3" class="col-sm-3 control-label">Email</label>
-						    <div class="col-sm-9">
-						      <input type="email" class="form-control" id="inputEmail3" placeholder="Email">
-						    </div>
-						  </div>
-						  <div class="form-group">
-						    <label for="inputPassword3" class="col-sm-3 control-label">Password</label>
-						    <div class="col-sm-9">
-						      <input type="password" class="form-control" id="inputPassword3" placeholder="Create a password">
-						    </div>
-						  </div>
-						  
-						  <div class="form-group">
-						    <div class="col-sm-offset-3 col-sm-9">
-						      <button type="submit" class="btn btn-default">Sign in</button>
-						    </div>
-						  </div>
-						</form>
-					</div>
-				</div>
-			</div>
-			<div class="row" style="margin-top: 20px">
-				<div class="col-sm-12">
-			  		<div class="content">
-			  		</div>
-				</div>
-			</div>
-			<div class="row">
-			  <div class="col-md-8">
-			  	Featured
-			  <!-- 	<img style="opacity: .8" src="./images/featured.jpg"> -->
-			  	
-			  	
-			  	New Posts
-			<!--   	<div class="row">
-			  		<div class="col-md-4">
-			  			<img src="./images/post1.jpg">
-			  		</div>
-			  		<div class="col-md-4">
-			  			<img src="./images/post2.jpg">
-			  		</div>
-			  		<div class="col-md-4">
-			  			<img src="./images/post3.jpg">
-			  		</div>
-			  	</div> -->
-			  	Popuar products
-			  </div>
-			  <div class="col-md-4">
-			  Best pick 
-			  Ad
-			  </div>
+				
 			</div>
 		</div>
-		
+
 	</div>
+	<div ng-view="">
+	</div>
+	
 </body>
 </html>
