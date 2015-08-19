@@ -1,11 +1,13 @@
 var express = require("express");
-var app = express();
 var path= require("path");
+var session = require("express-session");
+var app = express();
 
 require('./server/config/mongoose.js');
 require('./server/config/routes.js')(app);
 
 app.use(express.static(path.join(__dirname, './client')));
+app.use(session({secret: 'hereismysecret'}));
 
 app.listen(8000, function() {
 	console.log('listening on port 8000');

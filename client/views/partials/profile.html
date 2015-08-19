@@ -1,29 +1,28 @@
 <div class="container">
-	<div class="profile_content">
+	<div class="profile_content" >
+		<div ng-controller="mymakeupController">
 		<h3 class="subtitle">My make up desk</h3>
 		<img src="./images/emma_stone.jpg" width="180px">
-
 		<div class="my_makeup">
-			<h4 class="">MY MAKE UP LIST</h4>
-			<h4>Lips</h4>
-			<div class="row">
-				<div class="col-xs-3 col-md-3">
-				asdf
-				</div>
-				<div class="col-xs-3 col-md-3">
-				asdf
-				</div>
-				<div class="col-xs-3 col-md-3">
-				asdf
-				</div>
-				<div class="col-xs-3 col-md-3">
-				asdf
-				</div>
-				<div class="col-xs-3 col-md-3">
-				asdf
-				</div>
-			</div>
-			<h4>Cheeks</h4>
+			<h4 class="">MY MAKE UP LIST</h4><img class="add_icon" width="30px" src="../../images/add.png">
+	        <div id="add_my_makeup" class="white_content">Add new product 
+	        <form>
+	        	<input ng-model="newMymakeup.brand" type="text" placeholder="brand">
+	        	<input ng-model="newMymakeup.name" type="text" placeholder="name">
+	        	<input ng-model="newMymakeup.color" type="text" placeholder="color">
+	        	<input type="text" placeholder="price">
+	        	<select ng-model="newMymakeup.type" >
+					<option value="Lips">Lips</option>
+					<option value="Eyes">Eyes</option>
+					<option value="Face">Face</option>
+				</select>
+	        	<label>Purchased date</label>
+	        	<input ng-model="newMymakeup.date" type="date">
+	        	<input ng-click="addMymakeup()" type="submit" value="Add">
+	        </form>
+	        <p id="close">Close</p></div>
+	        <div id="fade" class="black_overlay"></div>
+			<h4>Face</h4>
 			<div class="row">
 				<div class="col-xs-3 col-md-3">
 				asdf
@@ -59,6 +58,20 @@
 				asdf
 				</div>
 			</div>
+			<h4>Lips</h4>
+			<div class="row">
+			  <div class="col-xs-3 col-md-3">
+			    <div class="thumbnail">
+			      <img src="..." alt="...">
+			      <div class="caption">
+			        <h3>Thumbnail label</h3>
+			        <p>...</p>
+			        <p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
+			      </div>
+			    </div>
+			  </div>
+			</div>
+		</div>
 		</div>
 	</div>
 </div>

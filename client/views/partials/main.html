@@ -1,5 +1,5 @@
 <div class="container">
-		<div class="wrapper">
+		<div class="wrapper" ng-controller='usersController'>
 			<div class="row">
 				<div class="col-sm-4">
 					<div class="content" id="content1">
@@ -14,16 +14,26 @@
 				<div class="col-sm-6">
 					<div class="content" id="register">
 						<h4>SIGN ME UP</h4>
-						<button id="facebook" type="button" class="btn btn-primary">Register with Facebook</button>
+						<button  ng-if = "!boolean" id="facebook" type="button" class="btn btn-primary">Register with Facebook</button>
+						<h6 ng-if = "!boolean">- OR -</h6>
 						<form class="input">
-						  <div class="form-group">
-						    <input class="input_border" type="email" class="form-control" id="exampleInputEmail1" placeholder="Email">
+						<div ng-show = "boolean" class="form-group">
+						    <input ng-model="newUser.first_name" class="input_border" type="text" class="form-control" id="exampleInputEmail1" placeholder="first name">
 						  </div>
-						  <div class="form-group">
-						    <input class="input_border" type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+						<div ng-show = "boolean" class="form-group">
+						    <input ng-model="newUser.last_name" class="input_border" type="text" class="form-control" id="exampleInputEmail1" placeholder="last name">
 						  </div>
-						  <button type="submit" class="btn btn-default">SIGN UP NOW</button>
+						  <div class="form-group" ng-show = "!boolean">
+						    <input ng-model="newUser.email" class="input_border" type="email" class="form-control" id="exampleInputEmail1" placeholder="Email">
+						  </div>
+						  <div class="form-group" ng-show = "!boolean">
+						    <input ng-model="newUser.password" class="input_border" type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+						  </div>
+						  <button ng-click="addUser(); boolean = !boolean" type="submit" class="btn btn-default">SIGN UP NOW</button>
 						</form>
+						<div ng-show = "success">
+							<p>yay</p>
+						</div>
 					</div>
 				</div>
 			</div>

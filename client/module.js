@@ -1,6 +1,6 @@
-var myApp = angular.module('myApp', ['ngRoute']);
+var myApp = angular.module('myApp', ['ngRoute', 'ngCookies'] );
 
-myApp.controller('makeupController', function($scope, makeupFactory){
+myApp.controller('makeupController', function($scope, $cookies, makeupFactory){
     $scope.makeup = makeupFactory.getMakeup(function(data) {
         $scope.makeup = data;
     });
@@ -31,8 +31,29 @@ myApp.directive('customOnChange', function() {
   };
 });
 
-myApp.controller('howtoController', function($scope, howtoFactory){
+myApp.controller('usersController', function($scope, $cookies, userFactory){
+    $scope.currentUser = {};
+    if($cookies.get("first_name")) {
+        $scope.currentUser["first_name"] = $cookies.get("first_name");
+        $scope.currentUser["_id"] = $cookies.get("_id");
+    }
+    $scope.boolean = false;
+    $scope.addUser = function(){
+        if ($scope.boolean){
+            console.log($scope.newUser);
+            userFactory.addUser($scope.newUser, function(data){
+                $scope.currentUser = data;
+                console.log(data);
+                $cookies.put("_id", data._id);
+                $cookies.put("first_name", data.first_name);
+                console.log($cookies.getAll());
+                $scope.success = true;
+            });
+
+        }
+    };
 });
+
 
 myApp.config(function ($routeProvider) {
   $routeProvider

@@ -2,20 +2,24 @@
 <html ng-app='myApp'>
 <head>
 	<title>mkup</title>
-	<script type="text/javascript" src="../assets/angular.min.js"></script>
-	<script type="text/javascript" src="../assets/angular-route.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.4/angular.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.4/angular-route.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.4/angular-cookies.js"></script>
 	<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
 	<link rel="stylesheet" type="text/css" href="../assets/bootstrap.css">
 	<script type="text/javascript" src="module.js"></script>
 	<script type="text/javascript" src="makeup_factory.js"></script>
+	<script type="text/javascript" src="user_factory.js"></script>
 	<link href='http://fonts.googleapis.com/css?family=Roboto+Slab:400,700' rel='stylesheet' type='text/css'>
 	<link href='http://fonts.googleapis.com/css?family=La+Belle+Aurore' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" href="/assets/css/style.css">
 
+
+
 	<style type="text/css">
-	* {
+/*	* {
 		outline: red dotted 1px;
-	}
+	}*/
 	.add_icon {
 		cursor: pointer;
 	}
@@ -27,6 +31,18 @@
        		 });
             $(".add_icon").click(function(){
             	alert("hi");
+            });
+            $(document).on("click", ".add_icon", function(){
+            	$("#add_my_makeup").show();
+            	$("#fade").show();	        
+            });
+            $(document).on("click", "#close", function(){
+            	$("#add_my_makeup").hide();
+            	$("#fade").hide();	        
+            });
+            $(document).on("click", "#fade", function(){
+            	$("#add_my_makeup").hide();
+            	$("#fade").hide();	        
             });
        });
 	</script>
