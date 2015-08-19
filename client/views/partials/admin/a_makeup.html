@@ -22,11 +22,16 @@
 					</div>
 				</div>
 				<div class="makeup col-xs-4 col-md-3 col-lg-2" ng-repeat="mkup in makeup">
-					<a href="">
-					<img src="./images/{{mkup.filename}}">
-					<p><span ng-bind="mkup.brand"></p>
-					<p><span ng-bind="mkup.name"></p>
-					</a>
+					<div class="card small">
+					    <div class="card-image">
+					      <img src="./images/{{mkup.filename}}">
+					    </div>
+					    <div class="card-content">
+					      <p><span ng-bind="mkup.brand"></p>
+							<p><span ng-bind="mkup.name"></p>
+					    </div>
+				  </div>
+					
 				</div>
 		</div>
 				
