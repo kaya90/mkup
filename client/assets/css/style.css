@@ -1,0 +1,286 @@
+a {
+    color: black;
+}
+body {
+    background-color: #efacb3;
+    /*background-image: url('./images/background.jpg');*/
+    background-size: 100% 100%;
+}
+nav {
+    padding-top: 10px;
+}
+.component {
+    padding-top: 70px;
+}
+#menu {
+    position: relative;
+    top: -13px;
+
+    margin-right: 5px;
+}
+#menu:hover {
+    cursor: pointer;
+}
+#logo {
+    position: relative;
+    top: -8px;
+
+    display: inline-block;
+
+    color: black;
+}
+#logo:hover {
+    text-decoration: none;
+
+    color: black;
+}
+.header {
+    /*position: fixed;*/
+    height: 100px;
+    padding: 20px;
+    margin: 0 auto;
+
+    opacity: 50%;
+    background-repeat: none;
+    background-size: 40%;
+}
+ul {
+    list-style: none;
+
+    text-align: right;
+}
+li {
+    display: inline;
+    padding: 0 10px;
+}
+li form {
+    display: inline;
+}
+.wrapper {
+    height: 400px;
+    margin: 0 auto;
+}
+.content {
+    display: inline-block;
+    height: 280px;
+}
+.content_right {
+    display: inline-block;
+    height: 100px;
+}
+/*img {
+		width: 100%;
+	}*/
+.featured {
+    width: 100%;
+    padding: 15px;
+
+    font-size: 20px;
+
+    text-align: right;
+
+    opacity: .85;
+    color: white;
+    background-color: black;
+}
+.profile {
+    text-align: right;
+}
+.content {
+    width: 100%;
+    /*background-color: white;*/
+    padding: 10px 20px;
+
+    background-image: url("./../../images/paper3.png");
+    background-size: 200% 200%;
+}
+.slide img {
+    width: 100%;
+    height: 230px;
+    overflow: hidden;
+
+    opacity: .9;
+}
+.slide p {
+    position: relative;
+    bottom: 20px;
+
+    width: 100%;
+
+    color: white;
+    background-color: black;
+}
+#content1 h2 {
+    padding: 25px;
+
+    font-family: "Roboto Slab", serif;
+
+    text-align: center;
+
+    opacity: .8;
+    color: white;
+    background-color: black;
+}
+#content1 p {
+    padding: 10px 25px;
+    margin: 0;
+
+    text-align: center;
+
+    opacity: .8;
+    color: white;
+    background-color: black;
+}
+#content1 {
+    background-image: url("./../../images/paper3.png");
+    background-position: 50%;
+    background-size: 100% 100%;
+}
+#slider {
+    margin-top: 15px;
+
+    background-image: url("./../../images/paper2.png");
+    background-size: 100% 100%;
+}
+#register {
+    padding: 15px 50px;
+
+    text-align: center;
+
+    background-image: url("./../../images/paper1.png");
+    background-size: 100% 100%;
+}
+#register button {
+    padding: 10px;
+
+    border-radius: none;
+}
+.profile_content {
+    padding: 10px 20px;
+
+    background-color: white;
+}
+.howto_content {
+    padding: 10px 20px;
+
+    background-color: white;
+}
+.menu_left {
+    position: fixed;
+    z-index: 1;
+
+    display: none;
+    float: left;
+    width: 350px;
+    width: 20%;
+    height: 100%;
+    height: 100%;
+    padding: 20px;
+
+    color: white;
+    background-color: #2a2a2a;
+}
+.subtitle {
+    font-family: "La Belle Aurore", cursive;
+}
+h4 {
+    font-family: "Arial Narrow", Arial, sans-serif;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 700;
+    font-variant: normal;
+    line-height: 15.3999996185303px;
+
+    letter-spacing: 6px;
+    text-transform: uppercase;
+}
+#facebook {
+    margin-bottom: 20px;
+
+    color: white;
+    background-color: #3b5998;
+}
+.page {
+    padding: 20px;
+
+    background-color: white;
+}
+
+.makeup a {
+    position: relative;
+
+    display: block;
+    padding-bottom: 50%;
+    overflow: hidden;
+
+    border-radius: 5px;
+}
+.makeup a img {
+    position: absolute;
+
+    display: block;
+    width: 100%;
+    height: auto;
+}
+.input_border {
+    padding: 5px;
+
+    font-size: 15px;
+
+    border: 3px solid black;
+    background: transparent;
+}
+::-webkit-input-placeholder {
+    /* WebKit, Blink, Edge */
+    font-family: "Rockwell Extra Bold", "Rockwell Bold", monospace;
+    font-size: 12px;
+    font-weight: 400;
+
+    letter-spacing: 2px;
+    text-transform: uppercase;
+
+    color: grey;
+}
+:-moz-placeholder {
+    font-family: "Rockwell Extra Bold", "Rockwell Bold", monospace;/* Mozilla Firefox 4 to 18 */
+    font-size: 12px;
+    font-weight: 400;
+
+    letter-spacing: 2px;
+    text-transform: uppercase;
+
+    opacity: .5;
+    color: grey;
+}
+::-moz-placeholder {
+    font-family: "Rockwell Extra Bold", "Rockwell Bold", monospace;/* Mozilla Firefox 19+ */
+    font-size: 12px;
+    font-weight: 400;
+
+    letter-spacing: 2px;
+    text-transform: uppercase;
+
+    opacity: .5;
+    color: grey;
+}
+:-ms-input-placeholder {
+    /* Internet Explorer 10-11 */
+    font-family: "Rockwell Extra Bold", "Rockwell Bold", monospace;
+    font-size: 12px;
+    font-weight: 400;
+
+    letter-spacing: 2px;
+    text-transform: uppercase;
+
+    color: grey;
+}
+.input button {
+    width: 182px;
+
+    border-radius: none;
+    background-color: #efacb3;
+}
+#quote {
+    height: 180px;
+    overflow: scroll;
+}

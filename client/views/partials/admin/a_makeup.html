@@ -1,0 +1,35 @@
+<div class="container">
+	<div class="wrapper page">
+		<div ng-controller='makeupController'>
+				<div class="tool">
+					<div class="row">
+						<form class="col-md-3">
+							<input class="input_border" type="text" placeholder="search" ng-model="filter_name">
+						</form>
+						<form class="col-md-9">
+							<input ng-model="newMakeup.brand" class="input_border" type="text" placeholder="brand">
+							<input ng-model="newMakeup.name" class="input_border" type="text" placeholder="name">
+							<input ng-model="newMakeup.color" class="input_border" type="text" placeholder="color">
+							<input ng-model="newMakeup.price" class="input_border" type="text" placeholder="price">
+							<select ng-model="newMakeup.type">
+								<option value="Lips">Lips</option>
+								<option value="Eyes">Eyes</option>
+								<option value="Face">Face</option>
+							</select>
+						    <input type="file" custom-on-change="uploadFile"/>
+		  					<input type="submit" value="Add" ng-click="addMakeup()">
+						</form>
+					</div>
+				</div>
+				<div class="makeup col-xs-4 col-md-3 col-lg-2" ng-repeat="mkup in makeup">
+					<a href="">
+					<img src="./images/{{mkup.filename}}">
+					<p><span ng-bind="mkup.brand"></p>
+					<p><span ng-bind="mkup.name"></p>
+					</a>
+				</div>
+		</div>
+				
+	</div>
+</div>
+

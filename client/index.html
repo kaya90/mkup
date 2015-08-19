@@ -4,134 +4,56 @@
 	<title>mkup</title>
 	<script type="text/javascript" src="../assets/angular.min.js"></script>
 	<script type="text/javascript" src="../assets/angular-route.min.js"></script>
-	<link rel="stylesheet" type="text/css" href="../assets/bootstrap.min.css">
+	<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="../assets/bootstrap.css">
 	<script type="text/javascript" src="module.js"></script>
+	<script type="text/javascript" src="makeup_factory.js"></script>
 	<link href='http://fonts.googleapis.com/css?family=Roboto+Slab:400,700' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=La+Belle+Aurore' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="/assets/css/style.css">
+
+	<link rel="stylesheet" href="css/reset.css"> <!-- CSS reset -->
+	<link rel="stylesheet" href="css/style.css"> <!-- Resource style -->
+	<script src="js/modernizr.js"></script> <!-- Modernizr -->
+
 	<style type="text/css">
-/*	* {
+	/** {
 		outline: black dotted 1px;
 	}*/
-	body {
-		background-color: #EFACB3;
-	}
-	.header {
-		margin: 0 auto;
-		background-size: 40%;
-		background-repeat: none;
-		/*position: fixed;*/
-		height: 100px;
-		opacity: 50%;
-		padding: 20px;
-		color: white;
-	}
-	a {
-		color: white;
-	}
-	ul {
-		text-align: right;
-		list-style: none;
-
-	}
-	li {
-		display: inline;
-		padding: 0px 10px;
-	}
-	li form {
-		display: inline;
-	}
-	.wrapper {
-		margin: 0 auto;
-		height: 400px;
-	}
-	.content {
-		height: 280px;
-		display: inline-block;
-	}
-	.content_right {
-		height: 100px;
-		display: inline-block;
-	}
-	/*img {
-		width: 100%;
-	}*/
-	.featured {
-		background-color: black;
-		padding: 15px;
-		color: white;
-		font-size: 20px;
-		opacity: .85;
-		width: 100%;
-		text-align: right;
-	}
-	.profile {
-		text-align: right;
-	}
-	.content {
-		background-color: white;
-		padding: 10px 20px;
-		width: 100%;
-	}
-	.slide img {
-		width: 100%;
-		height: 230px;
-		overflow: hidden;
-	}
-	.slide p {
-		background-color: black;
-		width: 100%;
-		color: white;
-		position: relative;
-		bottom: 20px;
-	}
-	#content1 h2 {
-		font-family: 'Roboto Slab', serif;
-		color: white;
-		background-color: black;
-		opacity: .8;
-		padding: 25px;
-		text-align: center;
-	}
-	#content1 p {
-		margin: 0px;
-		color: white;
-		background-color: black;
-		padding: 10px 25px;
-		opacity: .8;
-		text-align: center;
-	}
-	#content1 {
-		background-image: url("./images/content1.jpg");
-		background-position: 50%;
-	}
-	#slider {
-		margin-top: 15px;
-	}
-	#register {
-		text-align: center;
-	}
-	#register button {
-		padding: 10px;
-
-	}
-	.profile_content {
-		background-color: white;
-		padding: 10px 20px;
-	}
-	.howto_content {
-		background-color: white;
-		padding: 10px 20px;
+	.add_icon {
+		cursor: pointer;
 	}
 	</style>
+	<script type="text/javascript">
+        $(document).ready(function(){
+            $("#menu").click(function(){
+                $(".menu_left").animate({width: 'toggle'}, 200);
+       		 });
+            $(".add_icon").click(function(){
+            	alert("hi");
+            });
+       });
+	</script>
 </head>
 <body>
-	<div class="header">
+	<div class="menu_left">
+		<ul>
+			<a href="#/howto"><li>How to</li></a>
+			<li>Reviews</li>
+			<li>Beauty Tips</li>
+			<li>About Us</li>
+			<li>Contact Us</li>
+		</ul>
+	</div>
+	<nav class="navbar navbar-default navbar-fixed-top">
 		<div class="container">
 			
 			<div class="row">
-				<div class="col-xs-6 col-md-2">
-					<a href="#/"> <h3>MAKE UP</h3></a>
+				<div class="col-xs-6 col-md-3">
+					<img id="menu" src="./images/menu-alt-512.png" width="30px">
+					<a id="logo" href="#/"> <h3>MAKE UP</h3></a>
 				</div>
-				<div class="col-xs-6 col-md-10">
+				<div class="col-xs-6 col-md-9">
 					<!-- <ul>
 						<li><a>login</a></li>
 						<li><a>register</a></li>
@@ -144,17 +66,20 @@
 					</ul> -->
 					<div class="profile">
 						<a href="#/profile">
-						<img width="50px" height="50px" class="img-circle" src="./images/user_blank_profile.gif"></a>
-
+						<img width="50px" height="50px" class="img-circle" src="./images/user_blank_profile.png"></a>
 					</div> 
+
+
 				</div>
 				
 			</div>
 		</div>
 
+	</nav>
+
+	<div class="component" ng-view="">
 	</div>
-	<div ng-view="">
-	</div>
-	
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+	<script src="js/main.js"></script> <!-- Resource jQuery -->
 </body>
 </html>
